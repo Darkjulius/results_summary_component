@@ -7,33 +7,34 @@
 }
 
 body {
-  background-color: #fff;
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 1.125rem;
   min-height: 100vh;
 }
 
-/***** SECTION YOUR-RESULT *****/
-.your-result {
-  background: linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%);
-  border-radius: 0px 0px 32px 32px;
-  box-shadow: 0px 30px 60px 0px rgba(61, 108, 236, 0.15);
-  padding: 24px 58px 40px 58px;
-  text-align: center;
+.container {
+  background-color: #fff;
 }
 
-.your-result > p:first-child {
+/* BLOCK RESULTS */
+.results {
+  background: linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%);
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+}
+
+.results h1 {
   color: #cac9ff;
-  font-family: Hanken Grotesk;
+  text-align: center;
   font-feature-settings: "clig" off, "liga" off;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-bottom: 24px;
+  padding: 24px 0;
 }
 
-.result {
+.block-result-score {
   background: linear-gradient(
     180deg,
     #4d21c9 0%,
@@ -47,16 +48,17 @@ body {
   width: 140px;
 }
 
-.result p:nth-child(1) {
+.block-result-score p:first-child {
   color: #fff;
   font-feature-settings: "clig" off, "liga" off;
   font-size: 3.5rem;
   font-style: normal;
   font-weight: 800;
   line-height: 72px;
+  text-align: center;
 }
 
-.result p:last-child {
+.block-result-score p:last-child {
   color: #cac9ff;
   font-feature-settings: "clig" off, "liga" off;
   font-size: 1rem;
@@ -64,9 +66,16 @@ body {
   font-weight: 700;
   line-height: normal;
   opacity: 0.5;
+  text-align: center;
 }
 
-h1 {
+.block-result-txt {
+  margin: 0 auto;
+  padding-bottom: 40px;
+  width: 65%;
+}
+
+.block-result-txt p:first-child {
   color: #fff;
   font-feature-settings: "clig" off, "liga" off;
   font-size: 1.5rem;
@@ -75,20 +84,21 @@ h1 {
   line-height: normal;
   margin-bottom: 8px;
   margin-top: 24px;
+  text-align: center;
 }
 
-.your-result > p:last-child {
+.block-result-txt p:last-child {
   color: #cac9ff;
   font-feature-settings: "clig" off, "liga" off;
   font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  text-align: center;
 }
 
-/***** SECTION SUMMARY *****/
+/* BLOCK SUMMARY */
 .summary {
-  text-align: left;
   padding: 24px 30px 30px 30px;
 }
 
@@ -203,6 +213,7 @@ button {
   border: none;
   border-radius: 128px;
   color: #fff;
+  cursor: pointer;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -216,4 +227,68 @@ button {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    align-items: center;
+    background-color: #ecf2ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container {
+    border-radius: 32px;
+  }
+
+  .result-summary {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* BLOCK RESULTS */
+  .results {
+    border-radius: 32px;
+    width: 288px;
+  }
+
+  .results h1 {
+    font-size: 1.5rem;
+    margin-top: 38px;
+    margin-bottom: 35px;
+    padding: 0;
+  }
+
+  .block-result-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+  }
+
+  .block-result-score p:first-child {
+    font-size: 4.5rem;
+  }
+
+  .block-result-score p:last-child {
+    font-size: 1.125rem;
+  }
+
+  .block-result-txt {
+    width: 75%;
+  }
+
+  .block-result-txt p:first-child {
+    font-size: 2rem;
+  }
+
+  .block-result-txt p:last-child {
+    font-size: 1.125rem;
+  }
+
+  button:hover {
+    background: linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%);
+  }
 }

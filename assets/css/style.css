@@ -214,6 +214,8 @@ button {
   border-radius: 128px;
   color: #fff;
   cursor: pointer;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -288,7 +290,30 @@ button {
     font-size: 1.125rem;
   }
 
+  /* BLOCK SUMMARY */
+  .summary {
+    padding: 38px 40px 40px 46px;
+  }
+
+  .summary h2 {
+    font-size: 1.5rem;
+    margin-bottom: 28px;
+  }
+
+  .block .icon p,
+  .block .note p {
+    font-size: 18px;
+  }
+
+  .visual {
+    margin-bottom: 41px;
+  }
+
   button:hover {
     background: linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%);
+  }
+
+  .attribution {
+    margin-top: 30px;
   }
 }
